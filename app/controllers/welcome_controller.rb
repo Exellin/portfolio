@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController # :nodoc:
+class WelcomeController < ApplicationController
   def home
   end
 end
