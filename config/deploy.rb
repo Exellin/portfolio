@@ -7,7 +7,7 @@ set :group, "deployers"
 set :use_sudo, false
 set :rails_env, "production"
 set :deploy_via, :copy
-set :ssh_options, {user: 'estelix', :forward_agent => true, :port => 897 }
+set :ssh_options, { user: 'estelix', :forward_agent => true, :port => 897 }
 set :keep_releases, 5
 # default_run_options[:pty] = true (right now comes up with error)
 set :rvm_ruby_version, '2.3.0'
@@ -32,7 +32,6 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 namespace :deploy do
-
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -41,5 +40,4 @@ namespace :deploy do
       # end
     end
   end
-
 end
