@@ -28,7 +28,16 @@ gem 'rubocop', require: false
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
+end
+
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
