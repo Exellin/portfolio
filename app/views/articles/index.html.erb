@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+<div class="container"
+<div class="row">
+  <%= link_to article.title, article_path(article) %>
+  <%= truncate(article.body, length:100) %>
+</div>
+<% end %>
+</div>
