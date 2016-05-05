@@ -1,0 +1,37 @@
+$nav-height: 70px;
+$nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581DC;
+
+
+.navigation {
+  height: $nav-height;
+  background: $nav-background;
+  .nav-container {
+    float: right;
+    position: relative;
+    left: -50%; /* or right 50% */
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        float: left;
+        position: relative;
+        left: 50%;
+        a {
+          display: block;
+          padding: 0 20px;
+          line-height: $nav-height;
+          background: $nav-background;
+          color: $nav-font-color;
+          text-decoration: none;
+          &:hover {
+            background: $link-hover-color;
+            color: $nav-font-color;
+          }
+        }
+      }
+    }
+  }  
+}
