@@ -1,8 +1,8 @@
+$breakpoint: 800px;
 $nav-height: 70px;
 $nav-background: #262626;
 $nav-font-color: #ffffff;
 $link-hover-color: #2581DC;
-
 
 .navigation {
   height: $nav-height;
@@ -10,7 +10,7 @@ $link-hover-color: #2581DC;
   .nav-container {
     float: right;
     position: relative;
-    left: -50%; /* or right 50% */
+    left: -50%;
     ul {
       list-style: none;
       margin: 0;
@@ -34,4 +34,103 @@ $link-hover-color: #2581DC;
       }
     }
   }  
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .nav-mobile-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $nav-background;
+    height: $nav-height;
+    width: $nav-height;
+    #nav-toggle {
+      position: absolute;
+      left: 18px;
+      top: 22px;
+      padding: 10px 35px 16px 0px;
+      cursor: pointer;
+      span, span:before, span:after {
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: $nav-font-color;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+      }
+      span:before {
+        top: -10px;
+      }
+      span:after {
+        bottom: -10px;
+      }
+      &.active span {
+        background-color: transparent;
+        &:before,
+        &:after {
+        top: 0;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  
+  .nav-container {
+    ul {
+      display: none;
+      li {
+        float: none;
+      }
+    }
+  }
+  
+
+nav {
+  padding-top: $nav-height;
+  ul {
+    position: static;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      width: 100%;
+      a {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        background: $nav-background;
+        color: $nav-font-color;
+        text-decoration: none;
+        &:hover {
+          background: $link-hover-color;
+          color: $nav-font-color;
+        }
+      }
+    }
+  }
+}  
+
+
+}
+
+@media screen and (min-width: $breakpoint) {
+  .navigation {
+    padding-bottom: 0 !important;
+  }
+    nav {
+    ul {
+      display: none !important;
+      li {
+        float: none;
+      }
+    }
+  }
 }
