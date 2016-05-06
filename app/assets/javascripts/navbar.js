@@ -1,9 +1,9 @@
 /*global $*/
 $(document).ready(function() {
   $('#nav-toggle').click(function() {
-    $('nav ul').slideToggle();
-    var links = $('nav ul li').length;
-    var link_height = parseInt($('ul li').css('height'), 10);
+    $('.nav-container ul').slideToggle();
+    var links = $('.nav-container ul li').length;
+    var link_height = parseInt($('.nav-container ul li').css('height'), 10);
     var fullPadding = link_height*links;
     var currentPadding = $('.navigation').css('padding-bottom');
     this.classList.toggle('active');

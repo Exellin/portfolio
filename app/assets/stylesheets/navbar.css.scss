@@ -7,37 +7,27 @@ $link-hover-color: #2581DC;
 .navigation {
   height: $nav-height;
   background: $nav-background;
-  .nav-container {
-    float: right;
-    position: relative;
-    left: -50%;
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li {
-        float: left;
-        position: relative;
-        left: 50%;
-        a {
-          display: block;
-          padding: 0 20px;
-          line-height: $nav-height;
-          background: $nav-background;
-          color: $nav-font-color;
-          text-decoration: none;
-          &:hover {
-            background: $link-hover-color;
-            color: $nav-font-color;
-          }
-        }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      padding: 0 20px;
+      line-height: $nav-height;
+      background: $nav-background;
+      color: $nav-font-color;
+      text-decoration: none;
+      &:hover {
+        background: $link-hover-color;
+        color: $nav-font-color;
       }
     }
-  }  
+  }
 }
 
 @media only screen and (max-width: $breakpoint) {
-  .nav-mobile-container {
+  .nav-toggle-container {
     position: absolute;
     top: 0;
     right: 0;
@@ -83,54 +73,31 @@ $link-hover-color: #2581DC;
   }
   
   .nav-container {
+  padding-top: $nav-height;
     ul {
       display: none;
       li {
-        float: none;
+        width: 100%;
       }
     }
   }
-  
-
-nav {
-  padding-top: $nav-height;
-  ul {
-    position: static;
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      width: 100%;
-      a {
-        display: block;
-        padding: 0 20px;
-        line-height: $nav-height;
-        background: $nav-background;
-        color: $nav-font-color;
-        text-decoration: none;
-        &:hover {
-          background: $link-hover-color;
-          color: $nav-font-color;
-        }
-      }
-    }
-  }
-}  
-
-
 }
 
 @media screen and (min-width: $breakpoint) {
   .navigation {
     padding-bottom: 0 !important;
-  }
-    nav {
-    ul {
-      display: none !important;
-      li {
-        float: none;
-      }
+    .nav-container {
+      float: right;
+      position: relative;
+      left: -50%;
+      ul {
+        display: block !important;
+        li {
+          float: left;
+          position: relative;
+          left: 50%;
+        }
+      } 
     }
   }
 }
