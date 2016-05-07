@@ -88,6 +88,7 @@ $link-hover-color: #2581DC;
 @media screen and (min-width: $breakpoint) {
   .navigation {
     padding-bottom: 0 !important;
+    margin-bottom: 983-$nav-height !important;
     .nav-container {
       float: right;
       position: relative;
