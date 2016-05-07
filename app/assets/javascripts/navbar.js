@@ -6,8 +6,15 @@ $(document).ready(function() {
     var link_height = parseInt($('.nav-container ul li').css('height'), 10);
     var fullPadding = link_height*links;
     var currentPadding = $('.navigation').css('padding-bottom');
+    
     this.classList.toggle('active');
     (currentPadding == '0px') ? (currentPadding = fullPadding) : (currentPadding = '0px');
     $('.navigation').animate({paddingBottom: currentPadding});
+    
+    if (currentPadding == '0px') {
+      $('.navigation').animate({marginBottom: "+=" + fullPadding});
+    } else if ((currentPadding == fullPadding)) {
+      $('.navigation').animate({marginBottom: "-=" + fullPadding});
+    }
   });
 });
