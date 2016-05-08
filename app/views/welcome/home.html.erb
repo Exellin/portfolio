@@ -1,7 +1,68 @@
+<div class="text-over-image">
+  <div class="container">
+    <div class="col-xs-12">
+      <h1 align="center">
+        I'm Shawn Carnegie
+      </h1>
+      <h2 align="center">
+        Self taught aspiring web developer
+      </h4>
+    </div>
+  </div>
+</div>
+
+<div class="darken">
+</div>
+
 <section class="nepal">
-<%= image_tag("nepal.jpg") %>
+  <%= image_tag("nepal.jpg") %>
 </section>
 
-<section class="introduction">
-  
+<section class="Projects">
+  <div class="container">
+    <div class="col-xs=12">
+      <h1>Projects</h1>
+      <p>
+        Right now my only unique project close to completion is this portfolio.
+        It is a ruby on rails application deployed to my own Virtual Private Server.
+        More to come
+        <a href="https://github.com/Exellin/portfolio">Link on Github</a>
+      </p>
+    </div>
+  </div>
 </section>
+
+<section class="Blog">
+  <div class="container">
+    <div class="col-xs=12">
+      <h1>Blog</h1>
+      <% @articles.each do |article| %>
+      <div class="col-xs-12">
+        <h3>
+        <%= link_to article.title, article_path(article) %>
+        </h3>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="About">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8">
+        <h1>About Me</h1>
+        <p>
+          I graduated 2 years ago with a bachelor's in Mechanical Engineering.
+          After being unsuccessful in finding a job, I finally decided to
+          switch to an industry in which I can easily find information, 
+          I am motivated to improve myself every day,
+          and I can present my work to the world.
+        </p>
+      </div>
+      <div class="col-xs-4">
+        <%= image_tag("avatar.jpg", class: "img-responsive img-circle")%>
+      </div>
+    </div>
+  </div>
+</section

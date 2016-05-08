@@ -3,12 +3,13 @@ $nav-height: 70px;
 $nav-background: #262626;
 $nav-font-color: #ffffff;
 $link-hover-color: #2581DC;
+$picture-height: 983px;
 
 .navigation {
   height: $nav-height;
   background: $nav-background;
   opacity: 0.8;
-  margin-bottom: 983-$nav-height;
+  margin-bottom: $picture-height - $nav-height;
   ul {
     list-style: none;
     margin: 0;
@@ -88,7 +89,7 @@ $link-hover-color: #2581DC;
 @media screen and (min-width: $breakpoint) {
   .navigation {
     padding-bottom: 0 !important;
-    margin-bottom: 983-$nav-height !important;
+    margin-bottom: $picture-height - $nav-height !important;
     .nav-container {
       float: right;
       position: relative;
