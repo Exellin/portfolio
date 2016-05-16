@@ -9,7 +9,8 @@ $picture-height: 983px;
   height: $nav-height;
   background: $nav-background;
   opacity: 0.8;
-  margin-bottom: $picture-height - $nav-height;
+  position: relative;
+  z-index: 1;
   ul {
     list-style: none;
     margin: 0;
@@ -76,32 +77,25 @@ $picture-height: 983px;
   }
   
   .nav-container {
-  padding-top: $nav-height;
+    padding-top: $nav-height;
     ul {
       display: none;
-      li {
-        width: 100%;
-      }
     }
   }
 }
 
 @media screen and (min-width: $breakpoint) {
-  .navigation {
-    padding-bottom: 0 !important;
-    margin-bottom: $picture-height - $nav-height !important;
-    .nav-container {
-      float: right;
-      position: relative;
-      left: -50%;
-      ul {
-        display: block !important;
-        li {
-          float: left;
-          position: relative;
-          left: 50%;
-        }
-      } 
-    }
+  .nav-container {
+    float: right;
+    position: relative;
+    left: -50%;
+    ul {
+      display: block !important;
+      li {
+        float: left;
+        position: relative;
+        left: 50%;
+      }
+    } 
   }
 }
