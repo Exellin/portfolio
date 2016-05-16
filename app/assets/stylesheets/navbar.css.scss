@@ -9,7 +9,8 @@ $picture-height: 983px;
   height: $nav-height;
   background: $nav-background;
   opacity: 0.8;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1;
   ul {
     list-style: none;
@@ -76,7 +77,7 @@ $picture-height: 983px;
     }
   }
   
-  .nav-container {
+  .link-container {
     padding-top: $nav-height;
     ul {
       display: none;
@@ -85,7 +86,7 @@ $picture-height: 983px;
 }
 
 @media screen and (min-width: $breakpoint) {
-  .nav-container {
+  .link-container {
     float: right;
     position: relative;
     left: -50%;
