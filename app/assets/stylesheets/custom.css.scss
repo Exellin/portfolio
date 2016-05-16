@@ -23,7 +23,7 @@ body {
   background: rgba(70, 72, 82, 0.5);
   height: $picture-height;
   width: 100%;
-  z-index: -1;
+  z-index: -2;
 }
 
 .nepal {
@@ -31,7 +31,7 @@ body {
   top: 0px;
   left: 50%;
   margin-left: -$half-image-width;
-  z-index: -2;
+  z-index: -3;
 }
 
 .container {
@@ -50,6 +50,7 @@ p {
   padding-top:200px;
   color: #fff;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  z-index: -1;
   h1 {
     font-size: 60px;
   }
