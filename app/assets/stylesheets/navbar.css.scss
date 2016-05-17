@@ -7,7 +7,7 @@ $link-hover-color: #2581DC;
 .navigation {
   height: $nav-height;
   background: $nav-background;
-  opacity: 0.8;
+  opacity: 0.9;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -19,13 +19,11 @@ $link-hover-color: #2581DC;
       display: block;
       padding: 0 20px;
       line-height: $nav-height;
-      background: $nav-background;
       color: $nav-font-color;
       text-decoration: none;
       font-size: 2em;
       &:hover {
         background: $link-hover-color;
-        color: $nav-font-color;
       }
     }
   }
@@ -36,8 +34,6 @@ $link-hover-color: #2581DC;
     position: absolute;
     top: 0;
     right: 0;
-    background: $nav-background;
-    height: $nav-height;
     width: $nav-height;
     #nav-toggle {
       position: absolute;
