@@ -5,7 +5,7 @@ $(document).ready(function() {
   $(document).scroll(function() {
     scroll = $(this).scrollTop();
     if(scroll > 0) {
-      $('.navigation').css('background', '#262626');
+      $('.navigation').css('background', '#ffffff');
     } else {
       $('.navigation').css('background', 'transparent');
       }

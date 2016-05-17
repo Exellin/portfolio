@@ -1,7 +1,7 @@
 $breakpoint: 800px;
 $nav-height: 70px;
 $nav-background: transparent;
-$nav-font-color: #ffffff;
+$nav-font-color: #262626;
 $link-hover-color: #2581DC;
 
 .navigation {
@@ -22,6 +22,7 @@ $link-hover-color: #2581DC;
       background: $nav-background;
       color: $nav-font-color;
       text-decoration: none;
+      font-size: 2em;
       &:hover {
         background: $link-hover-color;
         color: $nav-font-color;
@@ -79,6 +80,7 @@ $link-hover-color: #2581DC;
   .link-container {
     padding-top: $nav-height;
     ul {
+      background: #ffffff;
       display: none;
     }
   }
