@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :require_admin, except: [:index, :show]
-  before_action :set_article, only: [:edit, :update, :show, :destroy]
+  before_action :set_article, only: [:edit, :update, :destroy]
 
   def index
     @articles = Article.all
@@ -34,6 +34,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    title = params[:title].gsub('-', ' ')
+    @article = Article.find_by_title(title)
   end
 
   def destroy

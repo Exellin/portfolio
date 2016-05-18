@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'blog/new', to: 'articles#new'
   get 'blog', to: 'articles#index'
-  resources :articles, except: [:new, :index]
+  get 'blog/:title', to: 'articles#show', as: 'article'
+  resources :articles, except: [:new, :index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
