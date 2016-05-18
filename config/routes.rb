@@ -7,9 +7,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#home'
   get 'blog/new', to: 'articles#new'
-  get 'blog', to: 'articles#index'
+  get 'blog', to: 'articles#index', as: 'articles'
   get 'blog/:title', to: 'articles#show', as: 'article'
-  resources :articles, except: [:new, :index, :show]
+  patch 'blog/:id', to: 'articles#update'
+  post 'blog', to: 'articles#create'
+  delete 'blog/:id', to: 'articles#destroy'
+  get 'blog/:id/edit', to: 'articles#edit', as: 'edit_article'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

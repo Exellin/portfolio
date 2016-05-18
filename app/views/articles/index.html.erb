@@ -2,11 +2,19 @@
   <div class="container">
     <h1>Blog</h1>
     <% @articles.each do |article| %>
-      <h3>
-      <% title = article.title.gsub(' ', '-') %>
-      <%= link_to article.title, article_path(title) %>
-      </h3>
-      <%= truncate(article.body, length:100) %>
+      <div class="well">
+        <h3>
+        <% title = article.title.gsub(' ', '-') %>
+        <%= link_to article.title, article_path(title) %>
+        </h3>
+        <%= truncate(article.body, length:100) %>...
+        <% if current_user.admin? %>
+          <%= link_to "edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+          <%= link_to "delete", article_path(article), method: :delete, 
+                                data: { confirm: "Are you sure you want to delete?" },
+                                class: "btn btn-xs btn-danger" %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
