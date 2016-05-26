@@ -13,4 +13,5 @@
  *= require_self
  *= require custom.css.scss
  *= require navbar.css.scss
+ *= require pygments.css.erb
  */
