@@ -32,16 +32,19 @@
   </div>
 </section>
 
-<section class="latest-blog-post">
-  <div class="container">
-    <div class="col-xs-12">
-      <h1>Latest Blog Post</h1>
-      <h3>
-      <%= link_to @articles.last.title, article_path(@articles.last) %>
-      </h3>
+<% unless @articles.last.nil? %>
+  <section class="latest-blog-post">
+    <div class="container">
+      <div class="col-xs-12">
+        <h1>Latest Blog Post</h1>
+        <h3>
+          <%= link_to @articles.last.title, 
+              article_path(@articles.last.title.tr(' ', '-')) %>
+        </h3>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>
 
 <section class="About">
   <div class="container">

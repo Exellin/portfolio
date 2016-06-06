@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   def update
     if @article.update(article_params)
       flash[:success] = "Article was successfully updated"
-      redirect_to articles_path
+      redirect_to article_path(@article.title)
     else
       render 'edit'
     end
@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    title = params[:title].gsub('-', ' ')
+    title = params[:title].tr('-', ' ')
     @article = Article.find_by_title(title)
   end
 
@@ -47,7 +47,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :body, :user_id)
   end
 
   def set_article
