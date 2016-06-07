@@ -15,4 +15,8 @@ module ApplicationHelper
     }
     return Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
+  
+  def require_admin
+    current_user.nil? ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
+  end
 end

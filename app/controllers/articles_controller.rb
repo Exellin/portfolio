@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  include ApplicationHelper
   before_action :require_admin, except: [:index, :show]
   before_action :set_article, only: [:edit, :update, :destroy]
 
@@ -45,16 +46,11 @@ class ArticlesController < ApplicationController
   end
 
   private
-
   def article_params
     params.require(:article).permit(:title, :body, :user_id)
   end
 
   def set_article
     @article = Article.find(params[:id])
-  end
-
-  def require_admin
-    current_user.nil? ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
   end
 end
