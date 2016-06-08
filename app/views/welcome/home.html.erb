@@ -18,16 +18,11 @@
   <%= image_tag("nepal.jpg") %>
 </section>
 
-<section class="latest-projects">
+<section class="latest-projects projects">
   <div class="container">
     <div class="col-xs-12">
-      <h1>Projects</h1>
-      <p>
-        Right now my only unique project close to completion is this portfolio.
-        It is a ruby on rails application deployed to my own Virtual Private Server.
-        More to come
-        <a href="https://github.com/Exellin/portfolio">Link on Github</a>
-      </p>
+      <h1>Latest Project</h1>
+      <%= render "/projects/show", project: Project.last %>
     </div>
   </div>
 </section>

@@ -8,12 +8,8 @@ $nav-height: 70px;
   margin-top: $nav-height;
 }
 
-.Projects {
-  margin-top: $nav-height;
-}
-
 .latest-projects {
-  margin-top: $picture-height;
+  margin-top: $picture-height + $nav-height;
 }
 
 .About {

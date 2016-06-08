@@ -13,5 +13,7 @@
  *= require_self
  *= require custom.css.scss
  *= require navbar.css.scss
+ *= require projects.css.scss
  *= require pygments.css.erb
+ *= require font-awesome
  */
