@@ -1,28 +1,14 @@
-== README
+== MY PORTFOLIO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This portfolio is hosted on a vps I set up from scratch and use capistrano to deploy.
+Its main purpose will be a place to show off my projects and as a place to set up a blog.
 
-Things you may want to cover:
+Features
 
-* Ruby version
+* Custom navigation bar that collapses and expands when viewing on mobile
 
-* System dependencies
+* Markdown and syntax highlighting for blog posts
 
-* Configuration
+* Sweet baxkground image of me in Nepal
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Projects listing with production link, github link, picture, and keywords

@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="col-xs-6">
+  <div class="col-xs-12 col-md-6">
     <%= image_tag(project.picture_link, class: "img-responsive") %>
   </div>
-  <div class="col-xs-6">
+  <div class="col-xs-12 col-md-6">
     <h1><%= project.title %></h1>
     <% unless project.tags.empty? %>
       <ul>
@@ -24,6 +24,7 @@
     <%= link_to project.website_url do %>
       <i class="fa fa-link"></i> Link
     <% end %>
+    <br></br>
     <% unless project.github_url.nil? %>
       <%= link_to project.github_url do %>
         <i class="fa fa-github"></i> Github
