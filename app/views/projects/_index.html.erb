@@ -1,0 +1,5 @@
+<div class="container projects">
+  <% @projects.each do |project| %>
+    <%= render "/projects/show", project: project %>
+  <% end %>
+</div>

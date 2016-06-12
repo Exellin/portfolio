@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post 'blog', to: 'articles#create'
   delete 'blog/:id', to: 'articles#destroy'
   get 'blog/:id/edit', to: 'articles#edit', as: 'edit_article'
-  resources :projects, except: [:show]
+  resources :projects, except: [:show, :index]
   resources :tags, except: [:show, :index , :new]
   get 'tags/new', to: 'tags#new', as: 'new_tag'
   

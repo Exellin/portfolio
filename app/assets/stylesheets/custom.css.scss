@@ -3,20 +3,36 @@
 $half-image-width: 960px;
 $picture-height: 983px;
 $nav-height: 70px;
+$footer-height: 500px;
 
-.Blog {
+#Footer {
+  height: $footer-height;
+  background-color: black;
+  .container {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  i {
+    font-size: 1.5em;
+    padding: 10px 20px;
+  }
+  h2 {
+    color: #888;
+    font-size: 1.6em;
+  }
+  p {
+    font-size: 1em;
+    color: white;
+  }
+}
+
+#Blog {
   margin-top: $nav-height;
 }
 
-.latest-projects {
+#Projects {
   margin-top: $picture-height + $nav-height;
-}
-
-.About {
-  margin-top:50px;
-  h1 {
-    margin-top:0;
-  }
 }
 
 body {
@@ -38,10 +54,6 @@ body {
   left: 50%;
   margin-left: -$half-image-width;
   z-index: -2;
-}
-
-p {
-  font-size: 1.5em;
 }
 
 .text-over-image {

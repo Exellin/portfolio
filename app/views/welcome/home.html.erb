@@ -1,3 +1,5 @@
+<%= render "/layouts/navbar" %>
+
 <div class="text-over-image">
   <div class="container">
     <div class="col-xs-12">
@@ -18,17 +20,17 @@
   <%= image_tag("nepal.jpg") %>
 </section>
 
-<section class="latest-projects projects">
+<section id="Projects">
   <div class="container">
     <div class="col-xs-12">
-      <h1>Latest Project</h1>
-      <%= render "/projects/show", project: Project.last %>
+      <h1>Projects</h1>
+      <%= render "/projects/index" %>
     </div>
   </div>
 </section>
 
 <% unless @articles.last.nil? %>
-  <section class="latest-blog-post">
+  <section id="Blog">
     <div class="container">
       <div class="col-xs-12">
         <h1>Latest Blog Post</h1>
@@ -41,20 +43,32 @@
   </section>
 <% end %>
 
-<section class="About">
+<section id="Footer">
   <div class="container">
-    <div class="col-xs-8">
-      <h1>About</h1>
+    <div class="col-xs-4 text-center">
+      <%= image_tag("avatar.jpg", class: "img-circle")%>
+    </div>
+    <div class="col-xs-4 text-center">
+      <h2>About me</h2>
       <p>
-        I graduated 2 years ago with a bachelor's in Mechanical Engineering.
-        After being unsuccessful in finding a job, I finally decided to
-        switch to an industry in which I can easily find information, 
-        I am motivated to improve myself every day,
-        and I can present my work to the world.
+        Recentlty I discovered that I am much more passionate towards programming 
+        than I ever was in mechanical engineering with my degree.  I chose web devlopment
+        as I love an industry in which I can easily find information, I am motivated to 
+        improve myself every day, and I can present my work to the world.
       </p>
     </div>
-    <div class="col-xs-4">
-      <%= image_tag("avatar.jpg", class: "img-responsive img-circle")%>
+    <div class="col-xs-4 text-center">
+      <h2>Where to find me</h2>
+      <div class="row">
+        <%= link_to "https://ca.linkedin.com/in/shawn-carnegie-90966742" do %>
+          <i class="fa fa-linkedin"></i>
+        <% end %>
+      </div>
+      <div class="row">
+        <%= link_to "https://github.com/Exellin" do %>
+          <i class="fa fa-github"></i>
+        <% end %>
+      </div>
     </div>
   </div>
-</section
+</section>
