@@ -20,6 +20,6 @@ $(document).ready(function() {
     event.preventDefault();
     var anchor = $(this);
     var target = $(anchor.attr('href')).offset().top - 70;
-    $('body').stop().animate({scrollTop: target});
+    $('html, body').stop().animate({scrollTop: target});
   });
 });
