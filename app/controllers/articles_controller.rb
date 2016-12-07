@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   include ApplicationHelper
-  before_action :require_admin, except: [:show]
+  before_action :require_admin, except: [:show, :index]
   before_action :set_article, only: [:edit, :update, :destroy]
 
   def index

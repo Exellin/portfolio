@@ -31,6 +31,12 @@ $footer-height: 600px;
   margin-top: $picture-height + $nav-height;
 }
 
+#Blog {
+  .container {
+    margin-top: $nav-height;
+  }
+}
+
 body {
   overflow-x: hidden;
 }
@@ -66,3 +72,4 @@ body {
     font-size: 25px;
   }
 }
+

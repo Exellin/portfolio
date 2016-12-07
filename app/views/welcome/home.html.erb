@@ -1,15 +1,11 @@
-<%= render "/layouts/navbar" %>
-
 <div class="text-over-image">
-  <div class="container">
-    <div class="col-xs-12">
-      <h1 align="center">
-        I'm Shawn Carnegie
-      </h1>
-      <h2 align="center">
-        Self taught aspiring web developer
-      </h4>
-    </div>
+  <div class="col-xs-12">
+    <h1 align="center">
+      I'm Shawn Carnegie
+    </h1>
+    <h2 align="center">
+      Self taught aspiring web developer
+    </h4>
   </div>
 </div>
 
@@ -20,28 +16,26 @@
   <%= image_tag("nepal.jpg") %>
 </section>
 
-<section id="Projects">
-  <div class="container">
+<div class="container">
+  <section id="Projects">
     <div class="col-xs-12">
       <h1>Projects</h1>
       <%= render "/projects/index" %>
     </div>
-  </div>
-</section>
-
-<% unless @articles.last.nil? %>
-  <section id="Blog">
-    <div class="container">
-      <div class="col-xs-12">
-        <h1>Latest Blog Post</h1>
-        <h3>
-          <%= link_to @articles.last.title, 
-              article_path(@articles.last.title.tr(' ', '-')) %>
-        </h3>
-      </div>
-    </div>
   </section>
-<% end %>
+
+  <% unless @articles.last.nil? %>
+    <section id="Blog">
+        <div class="col-xs-12">
+          <h1>Latest Blog Post</h1>
+          <h3>
+            <%= link_to @articles.last.title, 
+                article_path(@articles.last.title.tr(' ', '-')) %>
+          </h3>
+        </div>
+    </section>
+  <% end %>
+</div>
 
 <section id="Footer">
   <div class="container">

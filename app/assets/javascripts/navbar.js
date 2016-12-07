@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   $(document).scroll(function() {
     scroll = $(this).scrollTop();
-    if(scroll > 0) {
+    if(scroll > 0 && window.location.pathname === "/") {
       $('.navigation').css('background', '#ffffff');
     } else {
       $('.navigation').css('background', 'transparent');
@@ -17,9 +17,13 @@ $(document).ready(function() {
   });
   
   $('.scrollable').click(function(event) {
-    event.preventDefault();
-    var anchor = $(this);
-    var target = $(anchor.attr('href')).offset().top - 70;
-    $('html, body').stop().animate({scrollTop: target});
+    if (window.location.pathname === "/") {
+      event.preventDefault();
+      var anchor = $(this);
+      var target = $(anchor.attr('href')).offset().top - 70;
+      $('html, body').stop().animate({scrollTop: target});
+    } else {
+      window.location = "/" + (anchor.attr('href'));
+    }
   });
 });
