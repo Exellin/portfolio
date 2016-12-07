@@ -1,11 +1,12 @@
-<section id="Blog">
+<section id="Blog-listing">
   <div class="container">
     <% @articles.each do |article| %>
       <div class="well">
         <h3>
-        <% title = article.title.gsub(' ', '-') %>
-        <%= link_to article.title, article_path(title) %>
+          <% title = article.title.gsub(' ', '-') %>
+          <%= link_to article.title, article_path(title) %>
         </h3>
+        <%= article.created_at.strftime("%b %d, %Y")%>
         <% if current_user.try(:admin?) %>
           <%= link_to "edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
           <%= link_to "delete", article_path(article), method: :delete, 

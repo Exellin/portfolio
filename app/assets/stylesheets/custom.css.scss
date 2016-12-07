@@ -32,9 +32,24 @@ $footer-height: 600px;
 }
 
 #Blog {
+  strong {
+    font-size: xx-large;
+  }
+  h1 {
+    font-size: 45px;
+    font-weight: 800;
+  }
+  font-size: large;
+  line-height: 1.5;
+  font-family: serif;
+
   .container {
     margin-top: $nav-height;
   }
+}
+
+#Blog-listing {
+  margin-top: $nav-height;
 }
 
 body {

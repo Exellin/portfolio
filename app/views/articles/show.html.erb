@@ -1,6 +1,7 @@
-<section class="Blog">
+<section id="Blog">
   <div class="container">
-    <h2><%= @article.title %></h2>
+    <h1 align="center"><%= @article.title %></h1>
+    <div align="center"><%= @article.created_at.strftime("%b %d, %Y")%></div>
     <%= markdown(@article.body) %>
     <% if current_user.try(:admin?) %>
       <%= link_to "edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %>

@@ -25,15 +25,13 @@
   </section>
 
   <% unless @articles.last.nil? %>
-    <section id="Blog">
-        <div class="col-xs-12">
-          <h1>Latest Blog Post</h1>
-          <h3>
-            <%= link_to @articles.last.title, 
-                article_path(@articles.last.title.tr(' ', '-')) %>
-          </h3>
-        </div>
-    </section>
+    <div class="col-xs-12">
+      <h1>Latest Blog Post</h1>
+      <h3>
+        <%= link_to @articles.last.title, 
+            article_path(@articles.last.title.tr(' ', '-')) %>
+      </h3>
+    </div>
   <% end %>
 </div>
 
