@@ -1,0 +1,21 @@
+<% unless @articles.nil? %>
+  <% @articles.each do |article| %>
+    <div class="well">
+      <h3>
+        <% title = article.title.gsub(' ', '-') %>
+        <%= link_to article.title, article_path(title) %>
+      </h3>
+      <%= article.created_at.strftime("%b %d, %Y")%>
+      <% if current_user.try(:admin?) %>
+        <%= link_to "edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+        <%= link_to "delete", article_path(article), method: :delete, 
+                              data: { confirm: "Are you sure you want to delete?" },
+                              class: "btn btn-xs btn-danger" %>
+      <% end %>
+    </div>
+  <% end %>
+<% else %>
+  <h4>There are no articles matching this topic</h4>
+<% end %>
+
+  

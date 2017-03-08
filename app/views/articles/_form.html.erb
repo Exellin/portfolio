@@ -10,6 +10,13 @@
       <%= f.text_area :body, class: "form-control" %>
     </div>
     <div class="form-group">
+      <%= hidden_field_tag "article[topic_ids][]", nil %>
+      <% Topic.all.each do |topic| %>
+        <%= check_box_tag "article[topic_ids][]", topic.id, @article.topic_ids.include?(topic.id), id: topic.id %>
+        <%= label_tag topic.id, topic.name %><br>
+      <% end %>
+    </div>
+    <div class="form-group">
       <%= f.submit class: 'btn btn-primary' %>
     </div>
   <% end %>

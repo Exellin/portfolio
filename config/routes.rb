@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :projects, except: [:show, :index]
   resources :tags, except: [:show, :index , :new]
   get 'tags/new', to: 'tags#new', as: 'new_tag'
+  resources :topics
   
 
   # Example of regular route:
