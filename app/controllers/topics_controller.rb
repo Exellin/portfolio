@@ -11,6 +11,7 @@ class TopicsController < ApplicationController
   end
   
   def show
+    @articles = @topic.articles
   end
   
   def index
