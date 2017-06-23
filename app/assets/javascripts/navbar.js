@@ -1,4 +1,3 @@
-/*global $*/
 $(document).ready(function() {
   var scroll;
 
@@ -10,12 +9,12 @@ $(document).ready(function() {
       $('.navigation').css('background', 'transparent');
       }
   });
-  
+
   $('#nav-toggle').click(function() {
     $('.link-container ul').slideToggle();
     this.classList.toggle('active');
   });
-  
+
   $('.scrollable').click(function(event) {
     var anchor = $(this);
     if (window.location.pathname === "/") {
