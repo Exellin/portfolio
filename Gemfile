@@ -62,5 +62,6 @@ group :development do
 end
 
 group :production do
-  gem 'mysql2', '~> 0.3.20'
+  gem 'unicorn'
+  gem 'pg'
 end
