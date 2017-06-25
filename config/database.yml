@@ -27,7 +27,7 @@ staging:
   username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
 
-staging:
+production:
   <<: *default
   adapter: postgresql
   database: portfolio_production
