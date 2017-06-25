@@ -33,7 +33,7 @@ role :db, %w{deploy@192.241.198.19}, :primary => true
 
 set :branch, "production"
 set :rails_env, "production"
-set :deploy_to, "/var/www/portfolio_producition"
+set :deploy_to, "/var/www/portfolio_production"
 
 
 # Custom SSH Options
