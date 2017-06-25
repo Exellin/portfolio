@@ -19,7 +19,7 @@
 
 role :app, %w{deploy@192.241.198.19}
 role :web, %w{deploy@192.241.198.19}
-role :db, %w{deploy@192.241.198.19}, primary: true
+role :db, %w{deploy@192.241.198.19}, :primary => true
 
 
 
