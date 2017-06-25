@@ -22,12 +22,14 @@ test:
 
 staging:
   <<: *default
+  adapter: postgresql
   database: portfolio_staging
   username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
 
 staging:
   <<: *default
+  adapter: postgresql
   database: portfolio_production
   username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
