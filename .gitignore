@@ -25,7 +25,3 @@
 #ignore rubocop files
 /1000
 .rubocop*
-
-#ignore databse since using my own server
-/config/database.yml
-/config/secrets.yml

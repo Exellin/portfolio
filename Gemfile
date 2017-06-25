@@ -25,7 +25,6 @@ gem 'devise'
 gem 'redcarpet'
 gem 'pygments.rb'
 gem 'font-awesome-rails'
-gem 'puma'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

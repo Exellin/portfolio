@@ -169,7 +169,6 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     public_suffix (2.0.5)
-    puma (3.9.1)
     pygments.rb (1.1.2)
       multi_json (>= 1.0.0)
     rack (1.6.8)
@@ -316,7 +315,6 @@ DEPENDENCIES
   jquery-rails
   launchy
   pg
-  puma
   pygments.rb
   rails (= 4.2.4)
   rails_12factor
