@@ -25,11 +25,11 @@ staging:
   adapter: postgresql
   database: portfolio_staging
   username: deploy
-  password: <%= Figaro.env.database_password %>
+  password: <%= ENV["database_password"] %>
 
 production:
   <<: *default
   adapter: postgresql
   database: portfolio_production
   username: deploy
-  password: <%= Figaro.env.database_password %>
+  password: <%= ENV["database_password"] %>
