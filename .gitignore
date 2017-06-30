@@ -25,4 +25,5 @@
 #ignore rubocop files
 /1000
 .rubocop*
-/config/application.yml
+/config/database.yml
+/config/secrets.yml
