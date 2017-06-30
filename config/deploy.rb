@@ -2,7 +2,7 @@ set :application, 'portfolio'
 set :repo_url, 'https://github.com/Exellin/portfolio.git'
 set :user, "deploy"
 set :stages, %w(production, staging)
-set :rvm_ruby_version, '2.3.0'
+set :rvm_ruby_version, '2.4.0'
 
 # Default value for :format is :pretty
 # set :format, :pretty
