@@ -54,6 +54,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-passenger'
   gem 'capistrano-bundler'
+  gem 'capistrano-figaro-yml'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
