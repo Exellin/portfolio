@@ -1,5 +1,5 @@
 <% unless @articles.nil? %>
-  <% @articles.each do |article| %>
+  <% @articles.order('created_at DESC').each do |article| %>
     <div class="well">
       <h3>
         <% title = article.title.gsub(' ', '-') %>
