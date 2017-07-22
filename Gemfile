@@ -5,10 +5,20 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Use Bootstrap as the HTML, CSS, and JS framework
+gem 'bootstrap-sass'
+# Use Devise as the authentication solution
+gem 'devise'
+# Use font-awesome as the icon library
+gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+# Use pygments as the syntax highlighter
+gem 'pygments.rb'
+# Use Redcarpet as the markdown processor
+gem 'redcarpet'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,35 +33,36 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-gem 'bootstrap-sass'
-gem 'devise'
-gem 'redcarpet'
-gem 'pygments.rb'
-gem 'font-awesome-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Use capybara for feature testing
+  gem 'capybara'
+  # Use faker to generate data for use in factories
+  gem 'faker'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  gem 'rspec-rails'
+  # Use factory_girl as the fixtures replacement for testing
   gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'capybara'
+  # Use rspec as the testing framework
+  gem 'rspec-rails'
 end
 
 group :development do
-  # Use Capistrano for deployment
+  # Use Capistrano for deployment with passenger
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
-  gem 'capistrano-passenger'
-  gem 'capistrano-bundler'
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  # Use guard to automatically run tests on file save
+  gem 'guard-rspec', require: false
+  # Use rubocop for ruby file linting
+  gem 'rubocop', require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'rubocop', require: false
-  gem 'guard-rspec', require: false
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
 end
 
 group :production do
