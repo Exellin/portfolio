@@ -1,11 +1,9 @@
-inherit_from: .rubocop_todo.yml
-
 AllCops:
   Exclude:
     - db/schema.rb
     - db/migrate/**
 
-#112 is the longest line in rails generated files
+# 112 is the longest line in rails generated files
 Metrics/LineLength:
   Max: 112
   Exclude:

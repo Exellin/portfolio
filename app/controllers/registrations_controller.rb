@@ -3,6 +3,6 @@ class RegistrationsController < Devise::RegistrationsController
     super
     return unless resource.save
     flash.delete(:notice)
-    flash[:success] = "You have successfully signed up"
+    flash[:success] = 'You have successfully signed up'
   end
 end

@@ -27,9 +27,9 @@ role :db, %w[deploy@shawnwcarnegie.com], primary: true
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-set :branch, "production"
-set :rails_env, "production"
-set :deploy_to, "/var/www/portfolio_production"
+set :branch, 'production'
+set :rails_env, 'production'
+set :deploy_to, '/var/www/portfolio_production'
 
 # Custom SSH Options
 # ==================

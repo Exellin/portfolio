@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "New user" do
-  it "signs up" do
+describe 'New user' do
+  it 'signs up' do
     visit '/users/sign_up'
     fill_in('Email', with: 'test@example.com')
     fill_in('Password', with: 'password')

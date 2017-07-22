@@ -19,7 +19,7 @@ class TopicsController < ApplicationController
 
   def update
     if @topic.update(topic_params)
-      flash[:success] = "Topic was successfully updated"
+      flash[:success] = 'Topic was successfully updated'
       redirect_to topic_path(@topic)
     else
       render 'edit'
@@ -29,7 +29,7 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
-      flash[:success] = "Topic was successfully created"
+      flash[:success] = 'Topic was successfully created'
       redirect_to topic_path(@topic)
     else
       render 'new'
@@ -39,10 +39,10 @@ class TopicsController < ApplicationController
   def destroy
     if @topic.articles.nil?
       @topic.destroy
-      flash[:danger] = "Topic was successfully deleted"
+      flash[:danger] = 'Topic was successfully deleted'
       redirect_to topics_path
     else
-      flash[:notice] = "You still have articles using this topic"
+      flash[:notice] = 'You still have articles using this topic'
       redirect_to topic_path(@topic)
     end
   end

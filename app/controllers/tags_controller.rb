@@ -11,7 +11,7 @@ class TagsController < ApplicationController
 
   def update
     if @tag.update(tag_params)
-      flash[:success] = "Tag was successfully updated"
+      flash[:success] = 'Tag was successfully updated'
       redirect_to root_path
     else
       render 'edit'
@@ -21,7 +21,7 @@ class TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     if @tag.save
-      flash[:success] = "Tag was successfully created"
+      flash[:success] = 'Tag was successfully created'
       redirect_to root_path
     else
       render 'new'
@@ -30,7 +30,7 @@ class TagsController < ApplicationController
 
   def destroy
     @tag.destroy
-    flash[:danger] = "Tag was successfully deleted"
+    flash[:danger] = 'Tag was successfully deleted'
     redirect_to root_path
   end
 
