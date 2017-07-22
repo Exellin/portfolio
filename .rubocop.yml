@@ -22,3 +22,12 @@ Style/StringLiteralsInInterpolation:
 Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

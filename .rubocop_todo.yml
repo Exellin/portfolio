@@ -14,44 +14,9 @@ Bundler/OrderedGems:
   Exclude:
     - 'Gemfile'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/PercentStringArray:
-  Exclude:
-    - 'config/deploy.rb'
-
-# Offense count: 24
-Style/Documentation:
-  Enabled: false
-
-# Offense count: 69
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: when_needed, always, never
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-# Offense count: 9
-# Cop supports --auto-correct.
-# Configuration parameters: PreferredDelimiters.
-Style/PercentLiteralDelimiters:
-  Exclude:
-    - 'Guardfile'
-    - 'config/deploy.rb'
-    - 'config/deploy/production.rb'
-    - 'config/deploy/staging.rb'
-    - 'config/spring.rb'
-
 # Offense count: 100
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiterals:
   Enabled: false
-
-# Offense count: 7
-# Cop supports --auto-correct.
-# Configuration parameters: MinSize, SupportedStyles.
-# SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: brackets
