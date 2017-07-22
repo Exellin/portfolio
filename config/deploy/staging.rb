@@ -7,8 +7,6 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-
-
 # role-based syntax
 # ==================
 
@@ -19,9 +17,7 @@
 
 role :app, %w{deploy@192.241.198.19}
 role :web, %w{deploy@192.241.198.19}
-role :db, %w{deploy@192.241.198.19}, :primary => true
-
-
+role :db, %w{deploy@192.241.198.19}, primary: true
 
 # Configuration
 # =============
@@ -34,8 +30,6 @@ role :db, %w{deploy@192.241.198.19}, :primary => true
 set :branch, "master"
 set :rails_env, "staging"
 set :deploy_to, "/var/www/portfolio_staging"
-
-
 
 # Custom SSH Options
 # ==================

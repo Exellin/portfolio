@@ -11,8 +11,7 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @article.update(article_params)
@@ -46,6 +45,7 @@ class ArticlesController < ApplicationController
   end
 
   private
+
   def article_params
     params.require(:article).permit(:title, :body, :user_id, topic_ids: [])
   end
