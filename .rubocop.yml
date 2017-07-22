@@ -4,3 +4,21 @@ AllCops:
   Exclude:
     - db/schema.rb
     - db/migrate/**
+
+#112 is the longest line in rails generated files
+Metrics/LineLength:
+  Max: 112
+  Exclude:
+    - config/initializers/devise.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - Guardfile
+
+Style/StringLiteralsInInterpolation:
+  Exclude:
+    - 'bin/yarn'
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
