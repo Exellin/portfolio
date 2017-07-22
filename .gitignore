@@ -22,8 +22,6 @@
 #ignore spring 1000
 /spring-1000
 
-#ignore rubocop files
-/1000
-.rubocop*
+#ignore secrets and database username/password
 /config/database.yml
 /config/secrets.yml
