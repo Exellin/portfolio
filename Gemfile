@@ -55,8 +55,6 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
-  # Use guard to automatically run tests on file save
-  gem 'guard-rspec', require: false
   # Use rubocop for ruby file linting
   gem 'rubocop', require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
