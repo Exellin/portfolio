@@ -1,6 +1,6 @@
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :user do
     email { Faker::Internet.email }
     password { Faker::Internet.password }
@@ -9,6 +9,6 @@ FactoryGirl.define do
   factory :admin, class: User do
     email { Faker::Internet.email }
     password { Faker::Internet.password }
-    admin true
+    admin { true }
   end
 end

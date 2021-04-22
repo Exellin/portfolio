@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe 'New Article' do
-  let(:user) { FactoryGirl.create(:user) }
-  let(:admin) { FactoryGirl.create(:admin) }
-  let(:article) { FactoryGirl.create(:article, user_id: admin.id) }
+  let(:user) { FactoryBot.create(:user) }
+  let(:admin) { FactoryBot.create(:admin) }
+  let(:article) { FactoryBot.create(:article, user_id: admin.id) }
 
   it "can't be accessed without admin privileges" do
     visit '/users/sign_in'

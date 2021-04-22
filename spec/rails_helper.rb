@@ -54,4 +54,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # https://github.com/thoughtbot/factory_bot/issues/1255
+  FactoryBot.use_parent_strategy = false
 end

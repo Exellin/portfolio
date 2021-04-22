@@ -46,7 +46,7 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   # Use factory_girl as the fixtures replacement for testing
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   # Use rspec as the testing framework
   gem 'rspec-rails'
 end
