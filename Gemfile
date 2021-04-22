@@ -5,14 +5,16 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '2.7.3'
+
 # Use Bootstrap as the HTML, CSS, and JS framework
 gem 'bootstrap-sass'
 # Use Devise as the authentication solution
-gem 'devise'
+gem 'devise', '~> 4.7.3'
 # Use font-awesome as the icon library
 gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.1.1'
+gem 'rails', '6.1.3.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use pygments as the syntax highlighter
@@ -61,6 +63,7 @@ group :development do
   gem 'spring'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'listen'
 end
 
 group :production do
