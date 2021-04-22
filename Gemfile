@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.7.3'
+ruby '3.0.1'
 
 # Use Bootstrap as the HTML, CSS, and JS framework
 gem 'bootstrap-sass'
