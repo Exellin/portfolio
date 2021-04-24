@@ -25,3 +25,4 @@
 #ignore config secrets and environment variables
 /config/secrets.yml
 /config/environment_variables.rb
+.env

@@ -1,0 +1,14 @@
+.git
+/tmp
+/log
+
+.byebug_history
+.gitignore
+.dockerignore
+.rubocop.yml
+.ruby-version
+README.rdoc
+
+/config/secrets.yml
+/config/environment_variables.rb
+.env
