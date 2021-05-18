@@ -16,7 +16,7 @@ gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.1.3.1'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.3'
 # Use pygments as the syntax highlighter
 gem 'pygments.rb'
 # Use Redcarpet as the markdown processor
